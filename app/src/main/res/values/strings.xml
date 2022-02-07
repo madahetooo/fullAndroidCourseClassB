@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">fullCourseAndroidClassB</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="country">Country</string>
+    <string name="apply">Apply</string>
+    <string name="lets_count_together">Lets Count Together</string>
+    <string name="_1">+1</string>
+</resources>
