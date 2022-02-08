@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">fullCourseAndroidClassB</string>
+    <string name="app_name">class B</string>
     <string name="enter_your_email_address">Enter your email address</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="login">Login</string>
@@ -10,4 +10,23 @@
     <string name="apply">Apply</string>
     <string name="lets_count_together">Lets Count Together</string>
     <string name="_1">+1</string>
+    <string name="first_number">First Number</string>
+    <string name="second_number">Second Number</string>
+    <string name="add">Add</string>
+    <string name="dummy_text">DUMMY TEXT</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="show_image">Show Image</string>
+    <string name="dsc_logo">DSC LOGO</string>
+    <string name="welcome_to_our_resturant">Welcome to our resturant</string>
+    <string name="beef">Beef</string>
+    <string name="chicken">Chicken</string>
+    <string name="shrimp">Shrimp</string>
+    <string name="cheese">Cheese</string>
+    <string name="onions">Onions</string>
+    <string name="salad">Salad</string>
+    <string name="order">Order</string>
+    <string name="this_is_a_notification">This is a notification</string>
 </resources>
