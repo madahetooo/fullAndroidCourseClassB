@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <EditText
             android:id="@+id/etFirstName"
             android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
+
         <EditText
             android:id="@+id/etCountry"
             android:layout_width="match_parent"
@@ -52,11 +54,18 @@
         <Button
             android:id="@+id/btnApply"
             android:layout_width="match_parent"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:text="@string/apply" />
     </LinearLayout>
 
+    <Spinner
+        android:id="@+id/spMonths"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:entries="@array/months"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
