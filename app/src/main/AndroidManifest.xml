@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
+        <activity android:name=".TodoListApplication"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".ResturantMenu" />
         <activity android:name=".ImageViewExample" />

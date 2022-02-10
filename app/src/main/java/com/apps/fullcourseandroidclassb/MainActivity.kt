@@ -42,13 +42,10 @@ class MainActivity : AppCompatActivity() {
 
         val namesList = listOf("Mustapha", "Osama", "Imen", "Rayen", "Chiraz", "Amel", "Eslam")
         val namesAdapter = ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,namesList)
+
         spMonths.adapter = namesAdapter
             spMonths.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long
                 ) {
                     Toast.makeText(
                         this@MainActivity,
