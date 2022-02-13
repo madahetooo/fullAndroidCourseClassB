@@ -29,7 +29,7 @@
     <string name="salad">Salad</string>
     <string name="order">Order</string>
     <string name="this_is_a_notification">This is a notification</string>
-    <string name="welcome_to_our_gdsc_community">Welcome to our GDG Community</string>
+    <string name="welcome_to_our_gdsc_community">GDG COMMUNITY</string>
     <string name="events">Events</string>
     <string name="core_team">Core Team</string>
     <string name="members">Members</string>
@@ -37,6 +37,33 @@
     <string name="language">Language</string>
     <string name="log_out">Log out</string>
     <string name="enter_your_todo">Enter your todo</string>
+    <string name="nation_wide_car_rental_app">Nation wide car rental app</string>
+    <string name="hello_there">Hello There,</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_to_continuo">Sign in to continuo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="go">GO</string>
+    <string name="new_user_sign_up">NEW USER? SIGN UP</string>
+    <string name="sign_up_to_continuo">Sign up to continuo</string>
+    <string name="fullname">FullName</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="already_signed_up_login">ALREADY SIGNED UP? LOGIN</string>
+    <string name="base_activity">BASE ACTIVITY</string>
+    <string name="ieslammedhat_gmail_com">ieslammedhat@gmail.com</string>
+    <string name="eslam_medhat">Eslam Medhat</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_groups">My Groups</string>
+    <string name="send">Send</string>
+    <string name="archived">Archived</string>
+    <string name="spam">Spam</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>
