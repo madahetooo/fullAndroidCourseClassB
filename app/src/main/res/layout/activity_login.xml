@@ -59,8 +59,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etUserName"
         android:layout_width="match_parent"
+        android:id="@+id/etUsernameLayout"
         android:layout_height="wrap_content"
         android:hint="@string/username"
         android:layout_marginTop="10dp"
@@ -70,27 +70,46 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
+        android:id="@+id/etPasswordLayout"
         android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:passwordToggleEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName">
+        app:layout_constraintTop_toBottomOf="@+id/etUsernameLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/chkRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remember_me"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/grey"
+        android:checked="false"
+        android:fontFamily="@font/staatliches_regular"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView6"
@@ -102,14 +121,17 @@
         android:text="@string/forget_password"
         android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
+
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@color/red"
+        android:background="@color/red_500"
         android:text="@string/go"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,5 +151,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.152" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

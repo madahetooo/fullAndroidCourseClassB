@@ -10,7 +10,7 @@
         android:title="@string/my_groups" />
     <item
         android:id="@+id/miSettingsNumber2"
-        android:icon="@drawable/outline_settings_black_36"
+        android:icon="@drawable/icon_setting"
         android:title="@string/settings" />
     <item
         android:id="@+id/miLanguageNew"

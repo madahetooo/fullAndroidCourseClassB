@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">class B</string>
+    <string name="app_name">Bull\'sCars</string>
     <string name="enter_your_email_address">Enter your email address</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="login">Login</string>
@@ -64,6 +64,15 @@
     <string name="spam">Spam</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="bull_s_cars">BULL\'S CARS</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="home">Home</string>
+    <string name="apps">Apps</string>
+    <string name="profile">Profile</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="apps_fragment">APPS FRAGMENT</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>
