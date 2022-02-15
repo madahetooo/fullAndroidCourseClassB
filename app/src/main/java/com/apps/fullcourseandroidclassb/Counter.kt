@@ -2,6 +2,7 @@ package com.apps.fullcourseandroidclassb
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_calculator.*
 import kotlinx.android.synthetic.main.activity_counter.*
 
 class Counter : AppCompatActivity() {

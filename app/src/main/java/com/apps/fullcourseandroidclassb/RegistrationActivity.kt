@@ -13,7 +13,7 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
         supportActionBar?.hide()
         btnRegister.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, BullsCarsActivity::class.java)
             startActivity(intent)
         }
         tvLogin.setOnClickListener {

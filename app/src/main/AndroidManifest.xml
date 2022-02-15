@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".BullsCarsActivity"></activity>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity" />

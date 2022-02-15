@@ -47,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.setError("Please enter Password")
                 Toast.makeText(this, "Please fill the required data", Toast.LENGTH_LONG).show()
             } else {
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, BullsCarsActivity::class.java)
                 startActivity(intent)
             }
 

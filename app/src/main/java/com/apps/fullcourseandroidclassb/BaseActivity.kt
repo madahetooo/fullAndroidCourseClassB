@@ -5,19 +5,20 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_base.*
+import com.apps.fullcourseandroidclassb.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityBaseBinding
     lateinit var toggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_base)
-        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
-        drawerLayout.addDrawerListener(toggle)
+        binding = ActivityBaseBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        toggle = ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open, R.string.close)
+        binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        navView.setNavigationItemSelectedListener {
+        binding.navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.miProfile -> Toast.makeText(this, "My Profile", Toast.LENGTH_SHORT).show()
                 R.id.miGroup -> Toast.makeText(this, "My Group", Toast.LENGTH_SHORT).show()
