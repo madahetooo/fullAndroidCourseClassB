@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
         android:layout_marginTop="4dp"
         android:src="@drawable/logocar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@color/red_500"
+        android:background="@drawable/buttons_designs"
         android:text="@string/go"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

@@ -3,11 +3,15 @@ package com.apps.fullcourseandroidclassb
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
+@Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
+    var pressTwiceToExit = false
+
     @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +60,18 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
+    }
 
+    override fun onBackPressed() {
+        if (pressTwiceToExit) { // current value is TRUE
+            finish() // when it is TRUE, Close the application
+            super.onBackPressed()
+        }
+        pressTwiceToExit = true // Reassign to be TRUE
+        Toast.makeText(this, "Press Again Quickly to Exit", Toast.LENGTH_SHORT).show()
+        Handler().postDelayed({
+            pressTwiceToExit = false // Return to our default value
 
+        }, 3000)
     }
 }
