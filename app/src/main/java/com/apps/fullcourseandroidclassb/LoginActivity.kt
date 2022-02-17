@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.setError("Please enter Password")
                 Toast.makeText(this, "Please fill the required data", Toast.LENGTH_LONG).show()
             } else {
-                val intent = Intent(this, BullsCarsActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }
 
@@ -59,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
         tvRegister.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

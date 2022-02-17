@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.apps.fullcourseandroidclassb">
 
     <application
@@ -15,11 +16,15 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".TodoListApplication" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            tools:ignore="Instantiatable" />
         <activity android:name=".ResturantMenu" />
-        <activity android:name=".ImageViewExample" />
-        <activity android:name=".Calculator" />
-        <activity android:name=".Counter" />
+        <activity android:name=".ImageViewExample"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".Calculator"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".Counter"
+            tools:ignore="Instantiatable" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,18 +1,26 @@
 package com.apps.fullcourseandroidclassb
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_bulls_cars.*
+import kotlinx.android.synthetic.main.activity_bulls_cars.view.*
 
-class BullsCarsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bulls_cars)
-
+class BullsCarsActivity : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.activity_bulls_cars, container, false)
+        val viewPagger = view.findViewById<ViewPager2>(R.id.bullsCarsViewPager)
+        val tabLayout = view.findViewById<TabLayout>(R.id.bullsCarsTabLaout)
         val listOfImages = listOf(
             R.drawable.bulls_car_logo,
             R.drawable.bulls_cars_logo_new,
@@ -24,38 +32,43 @@ class BullsCarsActivity : AppCompatActivity() {
             R.drawable.carslogos6,
         )
         val bullsCarsAdapter = BullsCarsViewPagerAdapter(listOfImages)
-        bullsCarsViewPager.adapter = bullsCarsAdapter
+        view.bullsCarsViewPager.adapter = bullsCarsAdapter
 
-        TabLayoutMediator(bullsCarsTabLaout,bullsCarsViewPager){tab,position ->
+        TabLayoutMediator(tabLayout, viewPagger) { tab, position ->
             tab.text = "tab${position + 1}"
         }.attach()
 
-        bullsCarsTabLaout.addOnTabSelectedListener(object :TabLayout.OnTabSelectedListener{
+        view.bullsCarsTabLaout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                Toast.makeText(this@BullsCarsActivity,"Selected ${tab?.text}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Selected ${tab?.text}", Toast.LENGTH_SHORT)
+                    .show()
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                Toast.makeText(this@BullsCarsActivity,"UnSelected ${tab?.text}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    activity,
+                    "UnSelected ${tab?.text}",
+                    Toast.LENGTH_SHORT
+                ).show()
 
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                Toast.makeText(this@BullsCarsActivity,"ReSelected ${tab?.text}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    activity,
+                    "ReSelected ${tab?.text}",
+                    Toast.LENGTH_SHORT
+                ).show()
 
             }
 
         })
-
-
-
-
-
+        return view
+    }
+}
 
 //        bullsCarsViewPager.orientation = ViewPager2.ORIENTATION_VERTICAL
 //        bullsCarsViewPager.beginFakeDrag()
 //        bullsCarsViewPager.fakeDragBy(-10f)
 //        bullsCarsViewPager.endFakeDrag()
 
-    }
-}

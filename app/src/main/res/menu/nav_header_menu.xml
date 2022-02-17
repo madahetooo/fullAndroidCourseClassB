@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/miProfile"
-        android:icon="@drawable/icon_member"
-        android:title="@string/my_profile" />
+        android:id="@+id/miCounter"
+        android:icon="@drawable/counter_lcon"
+        android:title="@string/counter_app" />
     <item
-        android:id="@+id/miGroup"
-        android:icon="@drawable/icon_core_team"
-        android:title="@string/my_groups" />
+        android:id="@+id/miImageViewExample"
+        android:icon="@drawable/image_view_example_lcon"
+        android:title="@string/imageViewExample_app" />
     <item
-        android:id="@+id/miSettingsNumber2"
-        android:icon="@drawable/icon_setting"
-        android:title="@string/settings" />
+        android:id="@+id/miBullsCars"
+        android:icon="@drawable/bulls_cars_lcon"
+        android:title="@string/bulls_cars" />
     <item
-        android:id="@+id/miLanguageNew"
-        android:icon="@drawable/icon_language"
-        android:title="@string/language" />
+        android:id="@+id/miLogOut"
+        android:icon="@drawable/icon_logout"
+        android:title="@string/log_out" />
 
-    <group
-        android:id="@+id/group1"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/miSend"
-            android:icon="@drawable/icon_send"
-            android:title="@string/send" />
-        <item
-            android:id="@+id/miArchive"
-            android:icon="@drawable/icon_archive"
-            android:title="@string/archived" />
-        <item
-            android:id="@+id/miSpam"
-            android:icon="@drawable/icon_spam"
-            android:title="@string/spam" />
-        <item
-            android:id="@+id/miLogOut2"
-            android:icon="@drawable/icon_logout"
-            android:title="@string/log_out" />
-    </group>
 </menu>

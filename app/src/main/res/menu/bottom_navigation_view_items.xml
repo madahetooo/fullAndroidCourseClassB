@@ -2,19 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/miHome"
-        android:icon="@drawable/icon_home"
-        android:title="@string/home" />
+        android:id="@+id/miTodoListApp"
+        android:icon="@drawable/todo_lcon"
+        android:title="@string/todo" />
     <item
-        android:id="@+id/miApps"
-        android:icon="@drawable/icon_apps"
-        android:title="@string/apps" />
+        android:id="@+id/miRestaurant"
+        android:icon="@drawable/icon_food"
+        android:title="@string/restaurant" />
+
     <item
-        android:id="@+id/miprofile"
+        android:id="@+id/miCalculator"
+        android:icon="@drawable/calculator_lcon"
+        android:title="@string/calculator" />
+    <item
+        android:id="@+id/miProfile"
         android:icon="@drawable/icon_member"
         android:title="@string/profile" />
-    <item
-        android:id="@+id/miSettings"
-        android:icon="@drawable/icon_setting"
-        android:title="@string/settings" />
 </menu>

@@ -1,14 +1,22 @@
 package com.apps.fullcourseandroidclassb
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_todo_list_application.*
+import kotlinx.android.synthetic.main.activity_todo_list_application.view.*
 
-class TodoListApplication : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_todo_list_application)
+class TodoListApplication : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+      val view =  inflater.inflate(R.layout.activity_todo_list_application, container, false)
         var todoList = mutableListOf(
             Todo("Todo Number 1 ", false),
             Todo("Todo Number 2 ", false),
@@ -27,15 +35,21 @@ class TodoListApplication : AppCompatActivity() {
 //            Todo("Todo Number 15 ", false),
         )
         val ourAdapter = TodoAdapter(todoList)
-        rvTodos.adapter = ourAdapter
-        rvTodos.layoutManager = LinearLayoutManager(this)
+        view.rvTodos.adapter = ourAdapter
+        view.rvTodos?.layoutManager = LinearLayoutManager(activity)
 
-        btnAddTodo.setOnClickListener {
-            val newTodoTitle = etTodo.text.toString()
+        view.btnAddTodo.setOnClickListener {
+            val newTodoTitle = view.etTodo.text.toString()
             val newTodo = Todo(newTodoTitle, false)
             todoList.add(newTodo)
             ourAdapter.notifyItemInserted(todoList.size-1)
-            etTodo.text.clear()
+            view.etTodo.text.clear()
         }
+        return view
+
     }
-}
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_todo_list_application)
+
+    }

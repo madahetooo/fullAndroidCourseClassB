@@ -73,6 +73,12 @@
     <string name="apps_fragment">APPS FRAGMENT</string>
     <string name="profile_fragment">Profile Fragment</string>
     <string name="settings_fragment">Settings Fragment</string>
+    <string name="todo">Todo</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="calculator">Calculator</string>
+    <string name="counter_app">Counter App</string>
+    <string name="imageViewExample_app">ImageViewExample App</string>
+    <string name="bulls_cars">Bulls Cars</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>
