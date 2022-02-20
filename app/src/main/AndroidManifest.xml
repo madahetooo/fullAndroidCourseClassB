@@ -10,20 +10,26 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".BullsCarsActivity"></activity>
+        <activity android:name=".BroadcastReceiverExample"></activity>
+        <activity android:name=".NotificationExample" />
+        <activity android:name=".BullsCarsActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".TodoListApplication" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             tools:ignore="Instantiatable" />
         <activity android:name=".ResturantMenu" />
-        <activity android:name=".ImageViewExample"
+        <activity
+            android:name=".ImageViewExample"
             tools:ignore="Instantiatable" />
-        <activity android:name=".Calculator"
+        <activity
+            android:name=".Calculator"
             tools:ignore="Instantiatable" />
-        <activity android:name=".Counter"
+        <activity
+            android:name=".Counter"
             tools:ignore="Instantiatable" />
         <activity android:name=".SplashScreen">
             <intent-filter>
