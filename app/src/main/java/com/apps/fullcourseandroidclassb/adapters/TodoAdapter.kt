@@ -1,9 +1,11 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.apps.fullcourseandroidclassb.R
+import com.apps.fullcourseandroidclassb.data.local.Todo
 import kotlinx.android.synthetic.main.item_todo.view.*
 
 class TodoAdapter (var todos:List<Todo>) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>(){

@@ -1,9 +1,10 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.apps.fullcourseandroidclassb.R
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
@@ -14,7 +15,7 @@ class SplashScreen : AppCompatActivity() {
 
 
         Handler().postDelayed({
-            val intent = Intent(this, BroadcastReceiverExample::class.java)
+            val intent = Intent(this, OnBoardingScreens::class.java)
             startActivity(intent)
             finish()
         }, 3000)

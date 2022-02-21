@@ -1,8 +1,9 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.databinding.FragmentAppsBinding
 import kotlinx.android.synthetic.main.fragment_apps.*
 

@@ -1,13 +1,13 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.databinding.ActivityBaseBinding
 import kotlinx.android.synthetic.main.activity_base.*
 

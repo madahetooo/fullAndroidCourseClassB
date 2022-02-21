@@ -10,28 +10,29 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".BroadcastReceiverExample"></activity>
-        <activity android:name=".NotificationExample" />
-        <activity android:name=".BullsCarsActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".BaseActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".TodoListApplication" />
+        <activity android:name=".ui.OnBoardingScreens" />
+        <activity android:name=".ui.BroadcastReceiverExample" />
+        <activity android:name=".ui.NotificationExample" />
+<!--        <activity android:name=".ui.BullsCarsActivity" />-->
+        <activity android:name=".ui.HomeActivity" />
+        <activity android:name=".ui.BaseActivity" />
+        <activity android:name=".ui.RegistrationActivity" />
+        <activity android:name=".ui.LoginActivity" />
+<!--        <activity android:name=".ui.TodoListApplication" />-->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             tools:ignore="Instantiatable" />
-        <activity android:name=".ResturantMenu" />
+<!--        <activity android:name=".ResturantMenu" />-->
         <activity
-            android:name=".ImageViewExample"
-            tools:ignore="Instantiatable" />
-        <activity
-            android:name=".Calculator"
+            android:name=".ui.ImageViewExample"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".Counter"
+            android:name=".ui.Calculator"
             tools:ignore="Instantiatable" />
-        <activity android:name=".SplashScreen">
+        <activity
+            android:name=".ui.Counter"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

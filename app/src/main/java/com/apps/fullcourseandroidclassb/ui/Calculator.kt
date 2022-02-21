@@ -1,10 +1,11 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_calculator.view.*
 
 class Calculator : Fragment() {

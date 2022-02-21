@@ -1,8 +1,9 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_home.*
 
 @Suppress("DEPRECATION")

@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 @Suppress("DEPRECATION")

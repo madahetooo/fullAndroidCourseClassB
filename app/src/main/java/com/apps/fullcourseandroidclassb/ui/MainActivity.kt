@@ -1,16 +1,12 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_main.view.*
 
 @Suppress("DEPRECATION")
@@ -41,7 +37,8 @@ class MainActivity : Fragment() {
 
         val namesList = listOf("Mustapha", "Osama", "Imen", "Rayen", "Chiraz", "Amel", "Eslam")
         val namesAdapter =
-            activity?.let { ArrayAdapter<String>(it, R.layout.support_simple_spinner_dropdown_item, namesList) }
+            activity?.let { ArrayAdapter<String>(it,
+                R.layout.support_simple_spinner_dropdown_item, namesList) }
 
         view.spMonths.adapter = namesAdapter
         view.spMonths.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

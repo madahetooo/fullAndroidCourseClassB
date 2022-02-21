@@ -1,11 +1,11 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.item_bulls_cars_view_pager.view.*
-import kotlinx.android.synthetic.main.item_todo.view.*
 
 class BullsCarsViewPagerAdapter(var images:List<Int>) : RecyclerView.Adapter<BullsCarsViewPagerAdapter.BullsCarsViewPagerViewHolder>() {
     inner class BullsCarsViewPagerViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView)

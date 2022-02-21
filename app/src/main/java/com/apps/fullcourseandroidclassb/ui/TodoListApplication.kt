@@ -1,13 +1,14 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_todo_list_application.*
+import com.apps.fullcourseandroidclassb.R
+import com.apps.fullcourseandroidclassb.adapters.TodoAdapter
+import com.apps.fullcourseandroidclassb.data.local.Todo
 import kotlinx.android.synthetic.main.activity_todo_list_application.view.*
 
 class TodoListApplication : Fragment() {

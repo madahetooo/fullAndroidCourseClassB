@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.utils
 
 import android.content.BroadcastReceiver
 import android.content.Context

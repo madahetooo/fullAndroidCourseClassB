@@ -1,9 +1,11 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.apps.fullcourseandroidclassb.R
+import com.apps.fullcourseandroidclassb.utils.AirPlaneModeChangedReceiver
 
 class BroadcastReceiverExample : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

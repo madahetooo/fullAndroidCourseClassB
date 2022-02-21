@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_resturant_menu.*
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_resturant_menu.view.*
 
 class RestaurantMenu : Fragment() {

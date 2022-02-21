@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,6 +12,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.apps.fullcourseandroidclassb.R
 import kotlinx.android.synthetic.main.activity_notification_example.*
 
 @Suppress("DEPRECATION")
