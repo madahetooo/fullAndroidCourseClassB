@@ -10,7 +10,8 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".ui.SplashScreen"></activity>
+        <activity android:name=".ui.ShoppingActivity"></activity>
+        <activity android:name=".ui.SplashScreen" />
         <activity android:name=".ui.OnBoardingScreens" />
         <activity android:name=".ui.BroadcastReceiverExample" />
         <activity android:name=".ui.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->

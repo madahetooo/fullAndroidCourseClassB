@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.apps.fullcourseandroidclassb.R
-import com.apps.fullcourseandroidclassb.data.local.OnBoardingScreensItem
+import com.apps.fullcourseandroidclassb.data.local.db.entities.OnBoardingScreensItem
 
 class OnBoardingScreenItemAdapter(private val onBoardingScreenItem: List<OnBoardingScreensItem>) :
     RecyclerView.Adapter<OnBoardingScreenItemAdapter.OnBoardingScreenItemViewHolder>() {

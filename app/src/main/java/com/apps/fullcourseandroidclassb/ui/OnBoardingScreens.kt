@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.adapters.OnBoardingScreenItemAdapter
-import com.apps.fullcourseandroidclassb.data.local.OnBoardingScreensItem
+import com.apps.fullcourseandroidclassb.data.local.db.entities.OnBoardingScreensItem
 import kotlinx.android.synthetic.main.activity_onboarding_screens.*
 
 class OnBoardingScreens : AppCompatActivity() {

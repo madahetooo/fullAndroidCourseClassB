@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb.data.local
+package com.apps.fullcourseandroidclassb.data.local.db.entities
 
 data class OnBoardingScreensItem(
     val onBoardingScreenItemImage: Int,

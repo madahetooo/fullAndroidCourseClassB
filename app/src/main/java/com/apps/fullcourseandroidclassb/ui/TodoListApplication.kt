@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.adapters.TodoAdapter
-import com.apps.fullcourseandroidclassb.data.local.Todo
+import com.apps.fullcourseandroidclassb.data.local.db.entities.Todo
 import kotlinx.android.synthetic.main.activity_todo_list_application.view.*
 
 class TodoListApplication : Fragment() {
