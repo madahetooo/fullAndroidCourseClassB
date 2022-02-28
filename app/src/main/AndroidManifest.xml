@@ -10,28 +10,28 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".ui.ShoppingActivity"></activity>
-        <activity android:name=".ui.SplashScreen" />
-        <activity android:name=".ui.OnBoardingScreens" />
-        <activity android:name=".ui.BroadcastReceiverExample" />
-        <activity android:name=".ui.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->
-        <activity android:name=".ui.HomeActivity" />
-        <activity android:name=".ui.BaseActivity" />
-        <activity android:name=".ui.RegistrationActivity" />
-        <activity android:name=".ui.LoginActivity" /> <!-- <activity android:name=".ui.TodoListApplication" /> -->
+        <activity android:name=".ui.shoppinglist.ShoppingActivity"></activity>
+        <activity android:name=".ui.base.SplashScreen" />
+        <activity android:name=".ui.base.OnBoardingScreens" />
+        <activity android:name=".utils.BroadcastReceiverExample" />
+        <activity android:name=".utils.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->
+        <activity android:name=".ui.base.HomeActivity" />
+        <activity android:name=".ui.base.BaseActivity" />
+        <activity android:name=".ui.loginsystem.RegistrationActivity" />
+        <activity android:name=".ui.loginsystem.LoginActivity" /> <!-- <activity android:name=".ui.TodoListApplication" /> -->
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.others.MainActivity"
             tools:ignore="Instantiatable" /> <!-- <activity android:name=".ResturantMenu" /> -->
         <activity
-            android:name=".ui.ImageViewExample"
+            android:name=".ui.others.ImageViewExample"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".ui.Calculator"
+            android:name=".ui.others.Calculator"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".ui.Counter"
+            android:name=".ui.others.Counter"
             tools:ignore="Instantiatable" />
-        <activity android:name=".ui.CoroutinesExamples">
+        <activity android:name=".utils.CoroutinesExamples">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

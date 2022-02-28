@@ -21,7 +21,7 @@ abstract class ShoppingDatabase : RoomDatabase() {
         var instance: ShoppingDatabase? = null
 
         var LOCK = Any()
-        fun invoke(context: Context) = instance ?: synchronized(LOCK){
+        operator fun invoke(context: Context) = instance ?: synchronized(LOCK){
             instance ?: createDatabase(context).also {
                 instance = it
             }
