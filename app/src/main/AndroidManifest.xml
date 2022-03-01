@@ -10,7 +10,7 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".ui.shoppinglist.ShoppingActivity"></activity>
+        <activity android:name=".utils.CoroutinesExamples" />
         <activity android:name=".ui.base.SplashScreen" />
         <activity android:name=".ui.base.OnBoardingScreens" />
         <activity android:name=".utils.BroadcastReceiverExample" />
@@ -31,7 +31,7 @@
         <activity
             android:name=".ui.others.Counter"
             tools:ignore="Instantiatable" />
-        <activity android:name=".utils.CoroutinesExamples">
+        <activity android:name=".ui.shoppinglist.ShoppingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

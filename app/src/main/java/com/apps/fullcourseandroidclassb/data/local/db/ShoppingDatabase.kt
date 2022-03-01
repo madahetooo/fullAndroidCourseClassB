@@ -13,10 +13,8 @@ import com.apps.fullcourseandroidclassb.data.local.db.entities.ShoppingItem
 abstract class ShoppingDatabase : RoomDatabase() {
 
     abstract fun getShoppingDao():ShoppingDao
-
     //static keyword in java
     companion object {
-
         @Volatile
         var instance: ShoppingDatabase? = null
 

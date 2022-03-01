@@ -86,6 +86,10 @@
     <string name="item_image">Item Image</string>
     <string name="title">Title</string>
     <string name="lorpem_ipsum_sajkdfih_fnfnamsmpqc_mswmql_ma">Lorpem ipsum sajkdfih fnfnamsmpqc mswmql ma</string>
+    <string name="add_new_shopping_item">Add New Shopping Item</string>
+    <string name="enter_name">Enter name</string>
+    <string name="amount">Amount</string>
+    <string name="cancel">Cancel</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>
