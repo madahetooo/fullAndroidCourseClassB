@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.apps.fullcourseandroidclassb.R
+import com.apps.fullcourseandroidclassb.ui.loginsystem.LoginActivity
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
@@ -15,7 +16,7 @@ class SplashScreen : AppCompatActivity() {
 
 
         Handler().postDelayed({
-            val intent = Intent(this, OnBoardingScreens::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

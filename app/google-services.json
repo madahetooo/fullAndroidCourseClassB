@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29980967229",
+    "project_id": "classb-281fa",
+    "storage_bucket": "classb-281fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29980967229:android:32191031a05992ac400554",
+        "android_client_info": {
+          "package_name": "com.apps.fullcourseandroidclassb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29980967229-kicsmqbf3jtdu72nb0ndght8fl99ah82.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0Hk-IyuE8cD5QpD1FD-qyQWA0lth37Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29980967229-kicsmqbf3jtdu72nb0ndght8fl99ah82.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

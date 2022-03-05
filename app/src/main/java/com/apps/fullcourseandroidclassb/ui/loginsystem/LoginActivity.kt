@@ -8,16 +8,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.ui.base.HomeActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 @Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
     var pressTwiceToExit = false
+    private lateinit var auth: FirebaseAuth
 
     @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        auth = Firebase.auth
+        Firebase.auth.signOut()
+            //val currentUser = auth.currentUser
         supportActionBar?.hide()
         val sharedPreferencesFile = getSharedPreferences("loginDataFile", MODE_PRIVATE)
         val editor = sharedPreferencesFile.edit()
@@ -49,18 +56,37 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val userName = etUserName.text.toString()
             val password = etPassword.text.toString()
-            if (userName.isEmpty() && password.isNotEmpty()) {
-                etUserName.setError("Please enter Username")
+            if (userName.isNotEmpty() && password.isNotEmpty()) {
+                auth.signInWithEmailAndPassword(userName, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            val user = auth.currentUser
 
-            } else if (password.isEmpty() && userName.isNotEmpty()) {
-                etPassword.setError("Please enter Password")
-            } else if (userName.isEmpty() && password.isEmpty()) {
-                etUserName.setError("Please enter Username")
-                etPassword.setError("Please enter Password")
-                Toast.makeText(this, "Please fill the required data", Toast.LENGTH_LONG).show()
-            } else {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+                            val intent = Intent(this, HomeActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+//                                updateUI(null)
+                        }
+                    }
+
+//                auth.signInWithEmailAndPassword(userName, password)
+//                    .addOnCompleteListener(this) { task ->
+//                        if (task.isSuccessful) {
+//                            Toast.makeText(this, "Sign in Successfully, Welcome", Toast.LENGTH_LONG)
+//                                .show()
+//                            val intent = Intent(this, HomeActivity::class.java)
+//                            startActivity(intent)
+//                            finish()
+//                        } else {
+//                            Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
+//                        }
+//                    }
             }
 
         }
@@ -82,5 +108,16 @@ class LoginActivity : AppCompatActivity() {
             pressTwiceToExit = false // Return to our default value
 
         }, 3000)
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

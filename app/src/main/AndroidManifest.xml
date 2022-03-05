@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.apps.fullcourseandroidclassb">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logocar"
@@ -11,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
         <activity android:name=".utils.CoroutinesExamples" />
-        <activity android:name=".ui.base.SplashScreen" />
+        <activity android:name=".ui.shoppinglist.ShoppingActivity" />
         <activity android:name=".ui.base.OnBoardingScreens" />
         <activity android:name=".utils.BroadcastReceiverExample" />
         <activity android:name=".utils.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->
@@ -31,7 +33,7 @@
         <activity
             android:name=".ui.others.Counter"
             tools:ignore="Instantiatable" />
-        <activity android:name=".ui.shoppinglist.ShoppingActivity">
+        <activity android:name=".ui.base.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -84,7 +84,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etEmailAddress"
+            android:id="@+id/etEmailAddressLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,6 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/etUserNameRegistration">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress" />
@@ -109,7 +110,7 @@
             android:hint="@string/phone_number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmailAddress">
+            app:layout_constraintTop_toBottomOf="@+id/etEmailAddressLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -118,7 +119,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etPasswordRegistration"
+            android:id="@+id/etPasswordRegistrationLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,6 +131,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordRegistration"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword" />
@@ -144,7 +146,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.049"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPasswordRegistration" />
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordRegistrationLayout" />
 
         <RadioGroup
             android:id="@+id/radiogroup"
