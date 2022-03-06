@@ -1,6 +1,7 @@
 package com.apps.fullcourseandroidclassb.ui.base
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -9,17 +10,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.databinding.ActivityBaseBinding
+import com.apps.fullcourseandroidclassb.ui.loginsystem.LoginActivity
 import com.apps.fullcourseandroidclassb.ui.others.BullsCarsActivity
 import com.apps.fullcourseandroidclassb.ui.others.Counter
 import com.apps.fullcourseandroidclassb.ui.others.ImageViewExample
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_base.*
 
 class BaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseBinding
     lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setCurrentFragment(Counter())
+        auth = FirebaseAuth.getInstance()
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
         toggle = ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open, R.string.close)
@@ -51,8 +56,10 @@ class BaseActivity : AppCompatActivity() {
                 .setCancelable(false)
                 .setMessage("Do you want to exit?!")
                 .setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
-                    finish()
-                }
+                    auth.signOut()
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()                }
                 .setNegativeButton("No") { dialogInterface: DialogInterface, i: Int ->
                     dialogInterface.cancel()
 

@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/etUserNameRegistration">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etEmailAddress"
+                android:id="@+id/etEmailAddressRegistration"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress" />

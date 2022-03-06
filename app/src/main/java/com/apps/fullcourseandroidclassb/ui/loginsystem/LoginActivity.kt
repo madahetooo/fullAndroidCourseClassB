@@ -8,10 +8,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.ui.base.HomeActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
+
+const val REQUEST_CODE_SIGN_IN = 0
 
 @Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
@@ -19,30 +23,39 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     @SuppressLint("CommitPrefEdits")
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        auth = Firebase.auth
-        Firebase.auth.signOut()
-            //val currentUser = auth.currentUser
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
         supportActionBar?.hide()
-        val sharedPreferencesFile = getSharedPreferences("loginDataFile", MODE_PRIVATE)
+        val sharedPreferencesFile =
+            getSharedPreferences("loginDataFile", AppCompatActivity.MODE_PRIVATE)
         val editor = sharedPreferencesFile.edit()
-
         //GET DATA
         val currentUserName = sharedPreferencesFile.getString("userNameKey", null)
         val currentPassword = sharedPreferencesFile.getString("passwordKey", null)
         val currentCheckBoxStatus = sharedPreferencesFile.getBoolean("checkBoxStatusKey", false)
-
         //SET DATA
-        etUserName.setText(currentUserName)
-        etPassword.setText(currentPassword)
+        etUserNameLogin.setText(currentUserName)
+        etPasswordLogin.setText(currentPassword)
         chkRememberMe.isChecked = currentCheckBoxStatus
         chkRememberMe.setOnClickListener {
 
             //SET DATA TO SHRED PREFRENCES
-            val userName = etUserName.text.toString()
-            val password = etPassword.text.toString()
+            val userName = etUserNameLogin.text.toString()
+            val password = etPasswordLogin.text.toString()
             val checkBoxStatus = chkRememberMe.isChecked
             editor.apply {
                 putString("userNameKey", userName)
@@ -54,14 +67,14 @@ class LoginActivity : AppCompatActivity() {
 
         }
         btnLogin.setOnClickListener {
-            val userName = etUserName.text.toString()
-            val password = etPassword.text.toString()
+            val userName = etUserNameLogin.text.toString()
+            val password = etPasswordLogin.text.toString()
             if (userName.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(userName, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
                             val user = auth.currentUser
-
                             val intent = Intent(this, HomeActivity::class.java)
                             startActivity(intent)
                             finish()
@@ -71,22 +84,8 @@ class LoginActivity : AppCompatActivity() {
                                 baseContext, "Authentication failed.",
                                 Toast.LENGTH_SHORT
                             ).show()
-//                                updateUI(null)
                         }
                     }
-
-//                auth.signInWithEmailAndPassword(userName, password)
-//                    .addOnCompleteListener(this) { task ->
-//                        if (task.isSuccessful) {
-//                            Toast.makeText(this, "Sign in Successfully, Welcome", Toast.LENGTH_LONG)
-//                                .show()
-//                            val intent = Intent(this, HomeActivity::class.java)
-//                            startActivity(intent)
-//                            finish()
-//                        } else {
-//                            Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
-//                        }
-//                    }
             }
 
         }
@@ -95,6 +94,51 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        btnSignInWithGoogle.setOnClickListener {
+            val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.web_client_id))
+                .requestEmail()
+                .build()
+
+
+            val signInClient = GoogleSignIn.getClient(this, options)
+            signInClient.signInIntent.also {
+                startActivityForResult(it, REQUEST_CODE_SIGN_IN)
+            }
+
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_CODE_SIGN_IN) {
+            val gmailAccount = GoogleSignIn.getSignedInAccountFromIntent(data).result
+            gmailAccount?.let {
+                googleAuthForFirebase(gmailAccount)
+            }
+        }
+    }
+
+    private fun googleAuthForFirebase(gmailAccount: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(gmailAccount.idToken, null)
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    val user = auth.currentUser
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
     }
 
     override fun onBackPressed() {
@@ -109,15 +153,10 @@ class LoginActivity : AppCompatActivity() {
 
         }, 3000)
     }
-
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
 }
+
+
+//
+
+
+//

@@ -17,32 +17,31 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
         // Initialize Firebase Auth
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
         supportActionBar?.hide()
         btnRegister.setOnClickListener {
-
-            val emailAddress = etEmailAddress.text.toString() //GET EMAILADDRESS DATA
-            val password = etEmailAddress.text.toString() //GET PASSWORD
+            val emailAddress = etEmailAddressRegistration.text.toString() //GET EMAILADDRESS DATA
+            val password = etPasswordRegistration.text.toString() //GET PASSWORD
             if (emailAddress.isNotEmpty() && password.isNotEmpty()){
-                auth.createUserWithEmailAndPassword(emailAddress,password).addOnCompleteListener(this){
-                    task ->
-                    if (task.isSuccessful){
-                        Toast.makeText(this,"Sign Up Successfully, Welcome",Toast.LENGTH_LONG).show()
-                        val intent = Intent(this, BaseActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }else{
-                        Toast.makeText(this,"ERROR",Toast.LENGTH_LONG).show()
+                auth.createUserWithEmailAndPassword(emailAddress, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
+                            val currentUser = auth.currentUser
+
+                            //Navigation to Home Screen
+                            val intent = Intent(this, BaseActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT).show()
+                        }
                     }
-                }
             }
 
-
-
-
-            val intent = Intent(this, BaseActivity::class.java)
-            startActivity(intent)
-            finish()
         }
         tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -50,6 +49,4 @@ class RegistrationActivity : AppCompatActivity() {
             finish()
         }
     }
-
-
 }
