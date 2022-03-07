@@ -92,6 +92,7 @@
     <string name="cancel">Cancel</string>
     <string name="continuo_with_google">Continuo with Google</string>
     <string name="web_client_id">29980967229-kicsmqbf3jtdu72nb0ndght8fl99ah82.apps.googleusercontent.com</string>
+    <string name="retrieve_data">Retrieve Data</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>
