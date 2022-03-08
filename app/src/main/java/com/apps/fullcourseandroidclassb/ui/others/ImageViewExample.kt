@@ -20,39 +20,13 @@ import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
 class ImageViewExample : Fragment() {
-    private val profileInformationCollectionRef =
-        Firebase.firestore.collection("profileInformation")
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.activity_image_view_example, container, false)
-        val buttonRetrieveData = view.findViewById<Button>(R.id.btnRetrieveData)
-        buttonRetrieveData.setOnClickListener {
-            retrieveProfileInformation()
-        }
         return view
     }
 
-    private fun retrieveProfileInformation() {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val querySnapshot = profileInformationCollectionRef.get().await()
-                val stringBuilder = StringBuilder()
-                for (document in querySnapshot.documents) {
-                    val profileInformation = document.toObject<ProfileInformation>()
-                    stringBuilder.append("$profileInformation\n")
-                }
-                withContext(Dispatchers.Main) {
-                    tvRetrieveProfileInformation.text = stringBuilder.toString()
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(requireContext(), e.message, Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-    }
 }
