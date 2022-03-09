@@ -29,7 +29,7 @@ class MainActivity : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.activity_main, container, false)
-//        subscribeToRealTimeUpdates()
+        subscribeToRealTimeUpdates()
         val btnSaveProfileDetails = view.findViewById<Button>(R.id.btnSaveProfileDetails)
         val btnRetrieveProfileDetails = view.findViewById<Button>(R.id.btnRetrieveProfileDetails)
         val btnDeleteProfileDetails = view.findViewById<Button>(R.id.btnDeleteProfileDetails)
