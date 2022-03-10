@@ -12,7 +12,8 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".ui.base.SplashScreen"></activity>
+        <activity android:name=".CloudMessagingApp"></activity>
+        <activity android:name=".ui.base.SplashScreen" />
         <activity android:name=".utils.CoroutinesExamples" />
         <activity android:name=".ui.shoppinglist.ShoppingActivity" />
         <activity android:name=".ui.base.OnBoardingScreens" />
