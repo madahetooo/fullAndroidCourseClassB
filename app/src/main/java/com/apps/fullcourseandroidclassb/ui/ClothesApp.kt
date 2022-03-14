@@ -1,4 +1,4 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.adapters.ClothesImagesAdapter
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage

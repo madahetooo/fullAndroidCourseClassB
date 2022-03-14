@@ -1,10 +1,11 @@
-package com.apps.fullcourseandroidclassb
+package com.apps.fullcourseandroidclassb.ui
 
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.data.local.db.NotificationData
 import com.apps.fullcourseandroidclassb.data.local.db.PushNotification
 import com.apps.fullcourseandroidclassb.data.local.db.RetrofitInstance

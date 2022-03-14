@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#5E5E5E</color>
+    <color name="grey_light">#DADADA</color>
     <color name="view_pager_background">#C8F2EF</color>
 
 
