@@ -3,11 +3,10 @@ package com.apps.fullcourseandroidclassb.breakingbadapp.db
 import androidx.room.TypeConverter
 
 object AppTypeConverter {
-
     @TypeConverter
     @JvmStatic
     fun arrayStringToString(value:Array<String>?):String?{
-        return value?.joinToString { "|"}
+        return value?.joinToString (", ")
     }
     @TypeConverter
     @JvmStatic
