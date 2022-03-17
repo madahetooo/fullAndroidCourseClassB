@@ -18,7 +18,6 @@ abstract class CharacterDatabase :RoomDatabase(){
     companion object{
         @Volatile
         private var INSTANCE:CharacterDatabase?=null
-
         fun createDatabase(context: Context):CharacterDatabase{
             return INSTANCE?: synchronized(this){
                 val instance = Room.databaseBuilder(

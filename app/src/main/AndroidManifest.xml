@@ -14,42 +14,45 @@
         android:roundIcon="@drawable/logocar"
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
-        <activity android:name=".breakingbadapp.ui.BreakingBad" />
+        <activity
+            android:name=".MotherOfTheApps"
+            android:exported="false" />
+        <activity android:name=".pushnotification.ui.CloudMessagingApp" />
 
         <service
-            android:name="com.apps.fullcourseandroidclassb.pushnotification.service.FirebaseService"
-            android:permission="com.google.android.c2dm.permission.SEND"
-            android:exported="false">
+            android:name=".pushnotification.service.FirebaseService"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
-
         <activity android:name=".clothesapp.ui.ClothesApp" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.ui.base.SplashScreen" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.utils.CoroutinesExamples" />
+        <activity android:name=".breakingbadapp.ui.BreakingBad" />
+        <activity android:name=".otherapps.utils.CoroutinesExamples" />
         <activity android:name=".shoppinglist.ui.ShoppingActivity" />
         <activity android:name=".onboardingscreen.ui.OnBoardingScreens" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.utils.BroadcastReceiverExample" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.utils.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.ui.base.HomeActivity" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.ui.base.BaseActivity" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.ui.loginsystem.RegistrationActivity" />
-        <activity android:name="com.apps.fullcourseandroidclassb.otherapps.ui.loginsystem.LoginActivity" /> <!-- <activity android:name=".ui.TodoListApplication" /> -->
+        <activity android:name=".otherapps.utils.BroadcastReceiverExample" />
+        <activity android:name=".otherapps.utils.NotificationExample" /> <!-- <activity android:name=".ui.BullsCarsActivity" /> -->
+        <activity android:name=".otherapps.ui.base.HomeActivity" />
+        <activity android:name=".otherapps.ui.base.BaseActivity" />
+        <activity android:name=".otherapps.ui.loginsystem.RegistrationActivity" />
+        <activity android:name=".otherapps.ui.loginsystem.LoginActivity" /> <!-- <activity android:name=".ui.TodoListApplication" /> -->
         <activity
-            android:name="com.apps.fullcourseandroidclassb.firebasefirestoreapp.ui.MainActivity"
+            android:name=".firebasefirestoreapp.ui.MainActivity"
             tools:ignore="Instantiatable" /> <!-- <activity android:name=".ResturantMenu" /> -->
         <activity
-            android:name="com.apps.fullcourseandroidclassb.otherapps.ui.others.ImageViewExample"
+            android:name=".otherapps.ui.others.ImageViewExample"
             tools:ignore="Instantiatable" />
         <activity
-            android:name="com.apps.fullcourseandroidclassb.otherapps.ui.others.Calculator"
+            android:name=".otherapps.ui.others.Calculator"
             tools:ignore="Instantiatable" />
         <activity
-            android:name="com.apps.fullcourseandroidclassb.otherapps.ui.others.Counter"
+            android:name=".otherapps.ui.others.Counter"
             tools:ignore="Instantiatable" />
-        <activity android:name=".pushnotification.ui.CloudMessagingApp"
+        <activity
+            android:name=".otherapps.ui.base.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

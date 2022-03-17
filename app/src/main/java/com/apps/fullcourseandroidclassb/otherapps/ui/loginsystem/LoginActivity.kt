@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.apps.fullcourseandroidclassb.MotherOfTheApps
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.databinding.ActivityLoginBinding
 import com.apps.fullcourseandroidclassb.otherapps.ui.base.HomeActivity
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, MotherOfTheApps::class.java)
             startActivity(intent)
             finish()
         }
@@ -78,7 +79,7 @@ class LoginActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
                             val user = auth.currentUser
-                            val intent = Intent(this, HomeActivity::class.java)
+                            val intent = Intent(this, MotherOfTheApps::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -130,7 +131,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     val user = auth.currentUser
-                    val intent = Intent(this, HomeActivity::class.java)
+                    val intent = Intent(this, MotherOfTheApps::class.java)
                     startActivity(intent)
                     finish()
                 } else {

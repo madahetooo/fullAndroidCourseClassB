@@ -108,6 +108,13 @@
     <string name="notification_message">Notification Message</string>
     <string name="token">Token</string>
     <string name="send_notification">Send Notification</string>
+    <string name="characterimage">CharacterImage</string>
+    <string name="todolist_calculator">Todolist + Calculator</string>
+    <string name="bulls_cars_counter">Bulls Cars + Counter</string>
+    <string name="breaking_bad_characters">Breaking Bad Characters</string>
+    <string name="pushnotification_app">PushNotification App</string>
+    <string name="clothes_app">Clothes App</string>
+    <string name="shopping_list_item">Shopping List Item</string>
     <string-array name="months">
         <item>Jan</item>
         <item>Feb</item>

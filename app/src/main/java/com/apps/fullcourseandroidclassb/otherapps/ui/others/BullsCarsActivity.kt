@@ -29,14 +29,14 @@ class BullsCarsActivity : Fragment() {
         val viewPagger = view.findViewById<ViewPager2>(R.id.bullsCarsViewPager)
         val tabLayout = view.findViewById<TabLayout>(R.id.bullsCarsTabLaout)
         val listOfImages = listOf(
-            R.drawable.bulls_car_logo,
-            R.drawable.bulls_cars_logo_new,
-            R.drawable.car_logos1,
-            R.drawable.cars_logos2,
-            R.drawable.carslogos3,
-            R.drawable.carslogos4,
-            R.drawable.carslogos5,
-            R.drawable.carslogos6,
+            R.drawable.icon_events,
+            R.drawable.speakerfive,
+            R.drawable.speakerfour,
+            R.drawable.speakerone,
+            R.drawable.speakersix,
+            R.drawable.speakerthree,
+            R.drawable.speakertwo,
+            R.drawable.speakerthree,
         )
         val bullsCarsAdapter = BullsCarsViewPagerAdapter(listOfImages)
         binding.bullsCarsViewPager.adapter = bullsCarsAdapter

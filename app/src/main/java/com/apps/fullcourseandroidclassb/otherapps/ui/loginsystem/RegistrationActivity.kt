@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.apps.fullcourseandroidclassb.MotherOfTheApps
 import com.apps.fullcourseandroidclassb.R
 import com.apps.fullcourseandroidclassb.databinding.ActivityRegistrationBinding
 import com.apps.fullcourseandroidclassb.firebasefirestoreapp.model.ProfileInformation
@@ -46,7 +47,7 @@ class RegistrationActivity : AppCompatActivity() {
                             val currentUser = auth.currentUser
 
                             //Navigation to Home Screen
-                            val intent = Intent(this, BaseActivity::class.java)
+                            val intent = Intent(this, MotherOfTheApps::class.java)
                             startActivity(intent)
                             finish()
                         }
