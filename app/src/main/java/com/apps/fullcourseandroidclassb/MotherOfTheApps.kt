@@ -13,6 +13,7 @@ import com.apps.fullcourseandroidclassb.otherapps.ui.base.HomeActivity
 import com.apps.fullcourseandroidclassb.otherapps.ui.loginsystem.LoginActivity
 import com.apps.fullcourseandroidclassb.pushnotification.ui.CloudMessagingApp
 import com.apps.fullcourseandroidclassb.shoppinglist.ui.ShoppingActivity
+import com.apps.fullcourseandroidclassb.todolistapi.ui.TodoListApiApplication
 import com.google.firebase.auth.FirebaseAuth
 
 class MotherOfTheApps : AppCompatActivity() {
@@ -47,6 +48,10 @@ class MotherOfTheApps : AppCompatActivity() {
         }
         binding.btnShoppingItemApp.setOnClickListener {
             val intent = Intent(this, ShoppingActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnTodolistApiApp.setOnClickListener {
+            val intent = Intent(this, TodoListApiApplication::class.java)
             startActivity(intent)
         }
     }

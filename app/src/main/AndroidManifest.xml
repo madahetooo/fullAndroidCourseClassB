@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FullCourseAndroidClassB">
         <activity
+            android:name=".todolistapi.ui.TodoListApiApplication"
+            android:exported="false" />
+        <activity
             android:name=".MotherOfTheApps"
             android:exported="false" />
         <activity android:name=".pushnotification.ui.CloudMessagingApp" />
@@ -28,6 +31,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
+
         <activity android:name=".clothesapp.ui.ClothesApp" />
         <activity android:name=".breakingbadapp.ui.BreakingBad" />
         <activity android:name=".otherapps.utils.CoroutinesExamples" />

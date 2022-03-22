@@ -67,9 +67,20 @@
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:text="@string/shopping_list_item"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnTodolistApiApp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnClothesApp" />
+
+    <Button
+        android:id="@+id/btnTodolistApiApp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/todolist_api_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShoppingItemApp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

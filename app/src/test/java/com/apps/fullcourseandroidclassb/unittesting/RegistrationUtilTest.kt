@@ -15,6 +15,7 @@ class RegistrationUtilTest{
         )
         assertThat(result).isFalse()
     }
+
     @Test
     fun `password and confirmPassword are not the same`(){
         var result = RegistrationUtil.validateRegistrationInputs(

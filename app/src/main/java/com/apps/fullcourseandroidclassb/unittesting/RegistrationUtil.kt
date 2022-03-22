@@ -22,7 +22,7 @@ object RegistrationUtil {
         if (username in existingUsers){
             return false
         }
-        if (password.count { it.isDigit() }<2){
+        if (password.count { it.isDigit() } <2){
             return false
         }
         return true
